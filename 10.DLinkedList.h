@@ -8,6 +8,8 @@
 #define FALSE 0
 
 typedef int LData;
+// 데이터 타입 설정을 위한 방식 
+
 
 typedef struct _node
 {
