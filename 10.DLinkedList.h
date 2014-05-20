@@ -1,7 +1,7 @@
 #ifndef __D_LINKED_LIST_H__
 #define __D_LINKED_LIST_H__
-// ÀÚ·á¸¦ ÀÏ·Ä·Î ³ª¿­À» ÇÏ´Â ±¸Á¶ ÀÌ°í ¹Ýº¹ÀûÀÎ µ¥ÀÌÅÍ »ðÀÔÀÌ °¡´ÉÇÏ´Ù. 
-// ÀúÀåµÈ ¼ø¼­¸¦ ÁöÅ³ ÇÊ¿ä´Â ¾ø´Ù. 
+// ï¿½Ú·á¸¦ ï¿½Ï·Ä·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
 
 
 #define TRUE 1
@@ -17,43 +17,44 @@ typedef struct _node
 
 typedef struct _linkedList
 {
-	Node * head;  // LInkedListÀÇ ½ÃÀÛÀ» ³ªÅ¸³»´Â º¯¼ö
-	Node * cur;   // ÇöÀç ÂüÁ¶ÇÒ ¼öÀÖ´Â Node
-	Node * befor; // »èÁ¦½Ã µµ¿òÀ» ÁÖ´Â ³ëµå
-	/// Node * tail; ±»ÀÌ linkedList¿¡¼­ tailÀ» ¸ô¶óµµ head¸¦ ÅëÇØ¼­ Â÷±Ù Â÷±Ù Å½»öÀ» ÇÏ¸é ¸¶Áö¸· ¿ø¼Ò¸¦ Ã£À» ¼ö ÀÖ´Ù. 
+	Node * head;  // LInkedListï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	Node * cur;   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ Node
+	Node * befor; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
+	/// Node * tail; ï¿½ï¿½ï¿½ï¿½ linkedListï¿½ï¿½ï¿½ï¿½ tailï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ headï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò¸ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½. 
 	int numOfData;
 }LinkedList;
 
 typedef LinkedList List;
-
+// List expresion ì„ ë‹¤ì–‘í•˜ê²Œ ì–¸ì œë“ ì§€ ì´ ì½”ë“œë§Œ ìˆ˜ì •í•˜ë©´ ë°°ì—´ë¦¬ìŠ¤íŠ¸, ë‹¤ë¥¸ ë¦¬ìŠ¤íŠ¸ ë°©ì‹ì„ ì‚¬ìš©í•  ìˆ˜ ìžˆë„ë¡ ì„¤ì •í•˜
+// í•˜ê¸° ìœ„í•œ ë°©ì‹
 
 void ListInit(List * plist);
-// List¸¦ »ý¼ºÀ» ÇÏ°í °¢°¢ÀÇ °ªµéÀ» ÃÊ±âÈ­ ÇÑ´Ù.
-// List¸¦ ¸Þ¸ð¸®¿¡ ÇÒ´çÀ» ÇÏ°í ¸ÇÃ³À½¿¡ ºÒ·¯¾ß ÇÏ´Â ÇÔ¼ö 
+// Listï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½.
+// Listï¿½ï¿½ ï¿½Þ¸ð¸®¿ï¿½ ï¿½Ò´ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ 
 
 void LisntInsert(List * plist, LData data);
-// ¾Æ¹«°Íµµ ¾Èµé¾î ÀÖ´Â List¿¡ µ¥ÀÌÅÍ¸¦ ³ÖÀ» ÇÔ¼ö 
-// Áý¾î³ÖÀ» µ¥ÀÌÅÍÀÇ °ªÀº data ¸Å°³º¯¼ö¿¡ ³Ö¾î¼­ ÁØ´Ù. 
-// ³ÖÀ» ¹æÇâÀ» ¼³Á¤À» Àß °í·Á ÇØ¾ß ÇÑ´Ù. 
-// -- Á¤·ÄÀ» ÇØ¼­ ³ÖÀ»Áö ±×³É ´Ü¼øÈ÷ ¹èÄ¡¸¦ ÇÒÁö °áÁ´À»ÇÑ´Ù. 
-// -- ³ÖÀ» ¶§ ¸Ç ¾Õ¿¡ ³ÖÀ» Áö ¾Æ´Ï¸é ³¡¿¡ ¿¬°áÀ» ÇØ¼­ ³ÖÀ» Áö¸¦ °áÁ¤À» ÇÑ´Ù. 
+// ï¿½Æ¹ï¿½ï¿½Íµï¿½ ï¿½Èµï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ Listï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ 
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ data ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½Ø´ï¿½. 
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ñ´ï¿½. 
+// -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×³ï¿½ ï¿½Ü¼ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+// -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Õ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. 
 
 int LFirst(List * plist, LData * pdata);
-// List ÇüÅÂÀÇ µ¥ÀÌÅÍ Ç¥ÇöÀÌ ÀÖ´Âµ¥ °Å±â¼± ¼ø¼­´ë·Î Ç×»ó µ¥ÀÌÅÍ¸¦ Ã£À¸·Á°í ÇÒ¶§ 
-// ¸ÇÃ³À½À¸·Î µ¹¾Æ°¡¼­ µ¥ÀÌÅÍ¸¦ ÂüÁ¶ÇÏ´Â ÇÔ¼ö 
-// ÀÖÀ¸¸é ¹ÝÈ¯ °ªÀ» TRUE, ¾øÀ¸¸é FALSE
+// List ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Âµï¿½ ï¿½Å±â¼± ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¶ï¿½ 
+// ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ 
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ï¿½ï¿½ TRUE, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FALSE
 
 int LNext(List * plist, LData * pdata);
-// LFirst ÇÔ¼ö ´ÙÀ½¿¡ ¸®½ºÆ®¿¡ ÀÖ´Â ¿ø¼ÒµéÀ» ÂüÁ¶À» ÀÌ¿©¼­ ¿¬´Þ¾Æ ÇÒ¶§ ¸¶´Ù È£Ãâ ÇÔ¼ö 
-// ÂüÁ¶ ¼º°ø½Ã  ¹ÝÈ¯ °ªÀ» TRUE, ¾øÀ¸¸é FALSE
+// LFirst ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ¾ï¿½ ï¿½Ò¶ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ï¿½Ô¼ï¿½ 
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½È¯ ï¿½ï¿½ï¿½ï¿½ TRUE, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FALSE
 
 LData LRemove(List * plist);
-// LFirst ³ª LNextÇÔ¼ö¸¦ ÀÌ¿ëÇØ¼­ ¸¶Áö¸·À¸·Î ÂüÁ¶ÇÑ µ¥ÀÌÅÍ¸¦ ¹ÝÈ¯À» ÇÏ°í Á¦°Å¸¦ ÇÑ´Ù. 
+// LFirst ï¿½ï¿½ LNextï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½Ñ´ï¿½. 
 
 int LCount(List * plist);
-// ÇöÀç ¸®½ºÆ® ¾È¿¡ ³ëµåÀÇ °¹¼ö¸¦ ÆÄ¾ÇÀ» ÇÑ´Ù. 
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½È¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. 
 
 void SetSortRule(List *plist, int (*comp)(LData n1, LData n2));
-// ¸®½ºÆ®¸¦ Á¤·ÄÀ» ÇÒ ¶§ ±âÁØÀÌ µÇ´Â ÇÔ¼ö 
+// ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½ 
 
 #endif
