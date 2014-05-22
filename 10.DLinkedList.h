@@ -28,8 +28,8 @@ typedef struct _linkedList
 	Node * before; // 리스트 삭제 할때 필요한 부분
 	/// Node * tail; //리스트의 끝을 나타내는 부분 인데 그냥 여기서 맨앞에 삽입 하는 방식이 되면 필요가 없다. 
 	int numOfData;
-	int comp(LData d1 , LData d2 );  // 이값을 NULL로 초기화 한다면 head 에 삽입을 하는 방시긍로 구현을 하겠다는 것이다. 
-	// d1, d2라고 붙인 이유는 변수를 사용을 하기 위함이다. 
+	int (*comp)(LData, LData);  // 이값을 NULL로 초기화 한다면 head 에 삽입을 하는 방시긍로 구현을 하겠다는 것이다. 
+	// d1, d2라고 붙인 이유는 변수를 사용을 하기 위함이다. int (*comp)(LData d1, LData d2); 
 }LinkedList;
 // 리스트라는 자료구조 표현 
 
