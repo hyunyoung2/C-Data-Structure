@@ -41,7 +41,7 @@ void ListInit(List * plist);
 // 항상 리스트 생성을 하고 나서 초기화 할때 사용 하는 함수 
 // 리스트를 생서을 하고 나면 항사 초기화를 해주어야 한다. 
 
-void LisntInsert(List * plist, LData data);
+void ListInsert(List * plist, LData data);
 // 이 삽입을 하는데  comp 가 NULL이므로 그냥 head에 삽입을 한다. 
 
 int LFirst(List * plist, LData * pdata);
