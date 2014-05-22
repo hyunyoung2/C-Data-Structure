@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// 가장 쉽고 편하게 배열을 이용한 리스트 구현 
+
 int main()
 {
 	int arr[10];
