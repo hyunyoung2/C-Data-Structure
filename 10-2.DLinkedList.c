@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "10.DLinkedList.h"
-#include "fgag.h"
+#include "10.DLinkedList.h"
+
 
 void ListInit(List * plist)
 {
