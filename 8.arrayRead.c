@@ -10,7 +10,7 @@ int main()
 
 	while(1)
 	{
-		printf("ÀÚ¿¬¼ö ÀÔ·Â : " );
+		printf("ìì—°ìˆ˜ ì…ë ¥: " );
 		scanf("%d", &readData);
 		if(readData < 1)
 			break;
