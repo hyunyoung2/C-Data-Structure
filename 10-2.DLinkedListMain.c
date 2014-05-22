@@ -1,10 +1,10 @@
 #include <stdio.h>
-//#include "10.DLinkedList.h"
-#include "fgag.h"
+#include "10.DLinkedList.h"
 
-// listÀÇ comp¸¦ »ç¿ëÇÏ´Â ¹æ½Ä
 
-int WhoIsPrecede(int d1, int d2)
+// Listì˜ compë¥¼ ì‚¬ìš©í•˜ëŠ” ë°©ì‹
+
+int WhoIsPrecede(int d1, int d2)  // ì´ í•¨ìˆ˜ëŠ” ë‚´ê°€ ì •ë ¬ì„ í• ë ¤ëŠ” ê¸°ì¤€ì„ ì •í•˜ëŠ”ê±° í”„ë¡œê·¸ë˜ë¨¸ì—ê²Œ ììœ¨ì„±ì„ ë³´ì¥
 {
 	if(d1 < d2)
 		return 0;
@@ -16,15 +16,15 @@ int WhoIsPrecede(int d1, int d2)
 
 int main()
 {
-	/// ¸®½ºÆ®ÀÇ »ı¼º °ú ÃÊ±âÈ­ 
+	/// ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­ 
 	List list;
 	int data;
 
 	ListInit(&list);
 
-	SetSortRule(&list, WhoIsPrecede);  // Á¤·ÄÀ» ÇÒ ±âÁØÀ» Á¤ÇÑ´Ù. 
+	SetSortRule(&list, WhoIsPrecede);  // ë¦¬ìŠ¤íŠ¸ë¡œ ì •ë ¬ì„ í•  ê¸°ì¤€ì„ ë„˜ê¸´ë‹¤. 
 
-	// 5°³ÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù. 
+	// 5ê°œì˜ ë°ì´í„°ë¥¼ ì‚½ì… 
 	ListInsert(&list, 11);
 	ListInsert(&list, 11);
 	ListInsert(&list, 22);
@@ -32,7 +32,7 @@ int main()
 	ListInsert(&list, 33);
 
 
-	printf("ÇöÀç µ¥ÀÌÅÍÀÇ¼ö : %d \n", LCount(&list));
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½ : %d \n", LCount(&list));
 
 	if(LFirst(&list, &data))
 	{
@@ -62,8 +62,8 @@ int main()
 		}
 	}
 
-	// »èÁ¦¸¦ ÇÏ°í ³²¾Æ ÀÖ´Â µ¥ÀÌÅÍ ¼ö 
-	printf("ÇöÀç µ¥ÀÌÅÍÀÇ¼ö : %d \n", LCount(&list));
+	// ì‚­ì œí•˜ê³  ë‚¨ì•„ ìˆëŠ” ë°ì´í„°ì˜ ìˆ˜ 
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½ : %d \n", LCount(&list));
 
 
 	
