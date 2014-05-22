@@ -1,10 +1,10 @@
-// Àç±Í ÇÔ¼ö ÀÌÇØ¸¦ À§ÇÑ ÇÇº¸³ªÄ¡ ¼ö¿­ 
+//  ì¬ê·€ í•¨ìˆ˜ ì´í•´ë¥¼ ìœ„í•œ í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´
 
 #include <stdio.h>
 
 int Fibo(int n)
 {
-	printf("func call param %d \n\n", n); // Fibo() ÇÔ¼öÈ£Ãâ È®ÀÎÀ» À§ÇÑ Ãß°¡ Á¶°Ç
+	printf("func call param %d \n\n", n); // Fibo() í•¨ìˆ˜í˜¸ì¶œ í™•ì¸ì„ ìœ„í•œ ì¶”ê°€ ì¡°ê±´
 
 	if(n == 1)
 		return 0;
