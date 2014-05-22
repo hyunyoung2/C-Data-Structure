@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fgag.h"
+#include "10.DLinkedList.h"
 
 
 void ListInit(List * plist)
@@ -11,7 +11,7 @@ void ListInit(List * plist)
 	//plist -> comp = NULL;
 }
 
-// comp °¡ NULL ÀÌ¹Ç·Î head ´ÙÀ½¿¡ ¹Ù·Î ³ëµå¸¦ »ğÀÔÀ» ÇÑ´Ù. 
+// comp ê°€ NULL ì´ë¯€ë¡œ head ë‹¤ìŒì— ë°”ë¡œ ë…¸ë“œë¥¼ ì‚½ì…ì„ í•œë‹¤. 
 void ListInsert(List *plist, LData data)
 {
 	Node * newNode = (Node *)malloc(sizeof(Node));
