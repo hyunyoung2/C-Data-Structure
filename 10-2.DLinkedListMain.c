@@ -32,7 +32,7 @@ int main()
 	ListInsert(&list, 33);
 
 
-	printf("���� �������Ǽ� : %d \n", LCount(&list));
+	printf("현재 데이터의 수  : %d \n"ㅎ, LCount(&list));
 
 	if(LFirst(&list, &data))
 	{
@@ -63,7 +63,7 @@ int main()
 	}
 
 	// 삭제하고 남아 있는 데이터의 수 
-	printf("���� �������Ǽ� : %d \n", LCount(&list));
+	printf("현재 데이터의 수  : %d \n", LCount(&list));
 
 
 	
