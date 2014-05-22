@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-// ³»°¡ »ı¼ºÀ» ÇÒ node Å¸ÀÔ ¼³Á¤
+// ë‚´ê°€ ìƒì„±ì„ í•  node íƒ€ì… ì„¤ì •
 typedef struct _node
 {
 	int data;
@@ -11,7 +11,7 @@ typedef struct _node
 
 int main()
 {
-	// linked listÀÇ ½ÃÀÛÀ§Ä¡, ÇöÀç, ¸¶Áö¸· À§Ä¡ ¼³Á¤À» À§ÇÑ º¯¼ö 
+	//  linked listì˜ ì‹œì‘ìœ„ì¹˜, í˜„ì¬, ë§ˆì§€ë§‰ ìœ„ì¹˜ ì„¤ì •ì„ ìœ„í•œ ë³€ìˆ˜ 
 	Node * head = NULL;
 	Node * tail = NULL;
 	Node * cur = NULL;
@@ -22,18 +22,19 @@ int main()
 
 	while(1)
 	{
-		printf("ÀÚ¿¬¼ö ÀÔ·Â: ");
+		printf("ìì—°ìˆ˜ ì…ë ¥:");
 		scanf("%d", &readData);
 		if(readData < 1)
 			break;
 
-		// Èü¿µ¿ª¿¡ ¸Ş¸ğ¸®¸¦ ÇÒ´ç
+		// í™ì˜ì—­ì— ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹
 
 		newNode = (Node *)malloc(sizeof(Node));
 		newNode ->data = readData;
 		newNode -> next = NULL;
 
-		/// °¢°¢ »ı¼ºµÈ ³ëµå¸¦ ¿¬°áÀ» ÇÏ´Â ºÎºĞ
+		
+		/// ê°ê° ìƒì„±ëœ ë…¸ë“œë¥¼ ì—°ê²°ì„ í•˜ëŠ” ë¶€ë¶„
 		if(head == NULL)
 			head =  newNode; 
 		else 
@@ -43,17 +44,17 @@ int main()
 
 	}
 
-	// ÀÔ·ÂÀ» ¹ŞÀº µ¥ÀÌÅÍÀÇ Ãâ·Â°úÁ¤
-    printf("ÀÔ·Â ¹ŞÀº µ¥ÀÌÅÍ ÀüÃ¼ Ãâ·Â! \n");
+	// ì…ë ¥ì„ ë°›ì€ ë°ì´í„°ì˜ ì¶œë ¥ê³¼ì •
+    printf("ì…ë ¥ ë°›ì€ ë°ì´í„° ì „ì²´ ì¶œë ¥! \n");
 
 	if(head == NULL)
 	{
-		printf("ÀúÀåµÈ ÀÚ¿¬¼ö°¡ Á¸Àç ÇÏÁö ¾Ê½À´Ï´Ù.\n");
+		printf("ì €ì¥ëœ ìì—°ìˆ˜ê°€ ì¡´ì¬ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
 	}
 	else 
 	{
-		// ¿©±â ¼­µµ Ã³À½ ºÎºĞÀº ¼³Á¤À» ÇÏ°í 
-		// ±×´ÙÀ½ °è¼Ó ¹İº¹ÀûÀÎ È£Ãâ¹æ½Ä
+		// ì—¬ê¸° ì„œë„ ì²˜ìŒ ë¶€ë¶„ì€ ì„¤ì •ì„ í•˜ê³  
+		// ê·¸ë‹¤ìŒ ê³„ì† ë°˜ë³µì ì¸ í˜¸ì¶œë°©ì‹
 		cur = head;
 		printf("%d ", cur ->data);
 
@@ -67,20 +68,20 @@ int main()
 	printf("\n\n");
 
 
-	// ¸Ş¸ğ¸® ÇØÁ¦°úÁ¤///
+		// ë©”ëª¨ë¦¬ í•´ì œê³¼ì •///
 	if(head == NULL)
 		return 0;
 
 	else 
 	{
 
-		// ¿©±â ¼­µµ Ã³À½ ºÎºĞÀº ¼³Á¤À» ÇÏ°í 
-		// ±×´ÙÀ½ °è¼Ó ¹İº¹ÀûÀÎ È£Ãâ¹æ½Ä
+		// ì—¬ê¸° ì„œë„ ì²˜ìŒ ë¶€ë¶„ì€ ì„¤ì •ì„ í•˜ê³  
+		// ê·¸ë‹¤ìŒ ê³„ì† ë°˜ë³µì ì¸ í˜¸ì¶œë°©ì‹
 		Node * delNode = head;
 		Node * delNextNode = head -> next;
 
 
-		printf("%d¸¦ »èÁ¦ÇÕ´Ï´Ù. \n", head -> data);
+		printf("%dë¥¼ ì‚­ì œ í•©ë‹ˆë‹¤.  \n", head -> data);
 		free(delNode);
 
 		while(delNextNode != NULL)
@@ -88,7 +89,7 @@ int main()
 			delNode = delNextNode;
 			delNextNode = delNextNode -> next;
 
-			printf("%d¸¦ »èÁ¦ÇÕ´Ï´Ù. \n", delNode -> data);
+			printf("%dë¥¼ ì‚­ì œí•©ë‹ˆë‹¤. \n", delNode -> data);
 			free(delNode);
 		}
 	}
