@@ -11,7 +11,7 @@ void ListInit(List * plist)
 	//plist -> comp = NULL;
 }
 
-// comp °¡ NULL ÀÌ¹Ç·Î head ´ÙÀ½¿¡ ¹Ù·Î ³ëµå¸¦ »ðÀÔÀ» ÇÑ´Ù. 
+// comp ê°€ NULL ì´ë¯€ë¡œ  head ë‹¤ìŒì— ë°”ë¡œ ë…¸ë“œë¥¼ ì‚½ìž…ì„ í•œë‹¤. 
 void ListInsert(List *plist, LData data)
 {
 	/*
@@ -29,7 +29,7 @@ void ListInsert(List *plist, LData data)
 
 	newNode -> data = data;
 
-	// c¾ð¾îµµ ¸ÕÀú ºñ±³¿¬»ê¿¡¼­ ¾ÕÀÇ °ÍÀÌ ¸ÕÀú ÂüÀÌ¸é ±×³É ³Ñ¾î°£´Ù. 
+	// cì–¸ì–´ë„ ìžë°”ì™€ ë¹„ìŠ·í•˜ê²Œ ë¹„êµì—°ì‚°ì—ì„œ ì•žì˜ ê²ƒì´ ë¨¼ì € ì°¸ì´ë©´ ê·¸ëƒ¥ ë„˜ì–´ê°„ë‹¤. 
 	while(preNode -> next && (d = plist->comp(data, preNode -> next -> data)) != 0)
 	{
 		preNode = preNode->next;
@@ -87,6 +87,8 @@ int LCount(List * plist)
 	return plist -> numOfData;
 }
 
+
+// ë‹¨ìˆœ ë¹„êµí•¨ìˆ˜ ì •ë ¬ì„ ìœ„í•œ í•¨ìˆ˜ë¥¼ listì˜ ë©¤ë²„ë¡œ í•˜ê¸° ìœ„í•˜ì—¬ êµ¬ì„± 
 void SetSortRule(List * plist, int (*comp)(LData d1, LData d2))
 {
 	plist -> comp  = comp;
